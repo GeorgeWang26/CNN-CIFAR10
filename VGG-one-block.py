@@ -65,9 +65,9 @@ def run_test_harness():
 	# define model
 	model = define_model()
     # fit model
-	history = model.fit(trainX, trainY, epochs=5, batch_size=128, validation_data=(testX, testY), verbose=0)
+	history = model.fit(trainX, trainY, epochs=1, batch_size=128, validation_data=(testX, testY))
 	# evaluate model
-	_, acc = model.evaluate(testX, testY, verbose=0)
+	_, acc = model.evaluate(testX, testY)
 	print('> %.3f' % (acc * 100.0))
 	# learning curves
 	#summarize_diagnostics(history)
